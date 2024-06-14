@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Image Search Gallery</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen flex flex-col light-mode">
+    <header
+      class="text-center p-6 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white shadow-lg flex justify-between items-center"
+    >
+      <h1 class="text-4xl font-bold mx-auto">Interactive Image Search Gallery</h1>
+      <button
+        id="toggleTheme"
+        class="flex items-center justify-center p-2 bg-white rounded-full shadow-md"
+        aria-checked="false"
+      >
+        <i id="sunIcon" class="far fa-sun text-yellow-400 hidden"></i>
+        <i id="moonIcon" class="far fa-moon text-gray-200"></i>
+      </button>
+    </header>
+    <main class="container mx-auto px-4 py-8 flex-grow">
+      <div class="mb-6 flex justify-center">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search for images..."
+          class="w-full max-w-md p-2 rounded-md border text-gray-800"
+        />
+        <button
+          id="searchButton"
+          class="ml-2 p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-md"
+        >
+          Search
+        </button>
+      </div>
+      <div
+        id="gallery"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <!-- Art items will be inserted here by JavaScript -->
+      </div>
+      <div class="flex justify-center mt-6">
+        <button
+          id="prevPage"
+          class="p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-md mx-2"
+        >
+          Previous
+        </button>
+        <button
+          id="nextPage"
+          class="p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-md mx-2"
+        >
+          Next
+        </button>
+      </div>
+    </main>
+    <div
+      id="modal"
+      class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden"
+    >
+      <div class="bg-white p-6 rounded-lg max-w-lg w-full relative">
+        <span
+          id="closeModal"
+          class="absolute top-4 right-4 text-black cursor-pointer"
+          >&times;</span
+        >
+        <img
+          id="modalImage"
+          src=""
+          alt="Art"
+          class="w-full h-96 object-cover mb-4"
+        />
+        <p id="modalDescription" class="text-gray-800"></p>
+        <<a
+          id="downloadButton"
+          href="#"
+          download
+          class="block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-md p-2 mt-4 center-text"
+          >Download</a
+        >
+      </div>
+    </div>
+    <footer
+      class="text-center p-4 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white"
+    >
+      <a
+        href="https://youtube.com/@code-with-Bharadwaj"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Code with Bharadwaj</a
+      >
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

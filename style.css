@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+.light-mode {
+  background: linear-gradient(to right, #5c5c58, #1b1a1a);
+  color: #333;
+}
+
+.light-mode header,
+.light-mode footer {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.light-mode button {
+  background-color: #2d3748;
+  color: white;
+}
+
+/* Apply dark mode to the entire page */
+.dark-mode {
+  background-color: #1a202c;
+  color: #f0f0f0;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background: #1a202c;
+  color: #f0f0f0;
+}
+
+.dark-mode #modal {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Apply dark mode to the entire page */
+.dark-mode body {
+  background-color: #1a202c;
+  color: #f0f0f0;
+}
+
+/* Additional styles for buttons in dark mode */
+.dark-mode button {
+  background-color: #4a5568;
+  color: white;
+}
+
+#modalImage {
+  max-height: 80vh;
+}
+
+#gallery img {
+  transition: transform 0.3s ease;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+.center-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aspect-w-1 {
+  aspect-ratio: 1 / 1;
+}
